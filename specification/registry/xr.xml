@@ -285,8 +285,9 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
         <type name="XrOverlayMainSessionFlagBitsEXTX" category="enum"/>
         <type name="XrOverlaySessionCreateFlagBitsEXTX" category="enum"/>
 
+        <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
         <!-- enums for XR_KHR_visibility_mask -->
-        <type name="XrVisibilityMaskTypeKHR" category="enum"/>
+        <!-- type name="XrVisibilityMaskTypeKHR" category="enum"/ -->
 
         <!-- enums for XR_MSFT_spatial_graph_bridge -->
         <type name="XrSpatialGraphNodeTypeMSFT" category="enum"/>
@@ -674,7 +675,8 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
             <member><type>XrVector2f</type>                             <name>scale</name></member>
             <member><type>XrVector2f</type>                             <name>bias</name></member>
         </type>
-        <type category="struct" name="XrCompositionLayerDepthInfoKHR" structextends="XrCompositionLayerProjectionView">
+        <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
+        <!-- type category="struct" name="XrCompositionLayerDepthInfoKHR" structextends="XrCompositionLayerProjectionView">
             <member values="XR_TYPE_COMPOSITION_LAYER_DEPTH_INFO_KHR"><type>XrStructureType</type> <name>type</name></member>
             <member>const <type>void</type>*                            <name>next</name></member>
             <member><type>XrSwapchainSubImage</type>                    <name>subImage</name></member>
@@ -682,7 +684,7 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
             <member><type>float</type>                                  <name>maxDepth</name></member>
             <member><type>float</type>                                  <name>nearZ</name></member>
             <member><type>float</type>                                  <name>farZ</name></member>
-        </type>
+        </type -->
         <type category="struct" name="XrFrameBeginInfo">
             <member values="XR_TYPE_FRAME_BEGIN_INFO"><type>XrStructureType</type> <name>type</name></member>
             <member>const <type>void</type>*     <name>next</name></member>
@@ -761,13 +763,14 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
             <member><type>XrPerfSettingsNotificationLevelEXT</type>   <name>fromLevel</name></member>
             <member><type>XrPerfSettingsNotificationLevelEXT</type>   <name>toLevel</name></member>
         </type>
-        <type category="struct" name="XrEventDataVisibilityMaskChangedKHR" parentstruct="XrEventDataBaseHeader">
+        <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
+        <!-- type category="struct" name="XrEventDataVisibilityMaskChangedKHR" parentstruct="XrEventDataBaseHeader">
             <member values="XR_TYPE_EVENT_DATA_VISIBILITY_MASK_CHANGED_KHR"><type>XrStructureType</type> <name>type</name></member>
             <member>const <type>void</type>*                 <name>next</name></member>
             <member><type>XrSession</type>                   <name>session</name></member>
             <member><type>XrViewConfigurationType</type>     <name>viewConfigurationType</name></member>
             <member><type>uint32_t</type>                    <name>viewIndex</name></member>
-        </type>
+        </type -->
         <type category="struct" name="XrViewConfigurationProperties">
             <member values="XR_TYPE_VIEW_CONFIGURATION_PROPERTIES"><type>XrStructureType</type> <name>type</name></member>
             <member><type>void</type>*                       <name>next</name></member>
@@ -938,8 +941,9 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
             <member optional="true"><type>void</type>*                  <name>userData</name></member>
         </type>
 
+        <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
         <!-- struct types for XR_KHR_visibility_mask -->
-        <type category="struct" name="XrVisibilityMaskKHR">
+        <!-- type category="struct" name="XrVisibilityMaskKHR">
             <member values="XR_TYPE_VISIBILITY_MASK_KHR"><type>XrStructureType</type> <name>type</name></member>
             <member><type>void</type>*                 <name>next</name></member>
             <member optional="true"><type>uint32_t</type>                                   <name>vertexCapacityInput</name></member>
@@ -948,7 +952,7 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
             <member optional="true"><type>uint32_t</type>                                   <name>indexCapacityInput</name></member>
             <member optional="true"><type>uint32_t</type>                                   <name>indexCountOutput</name></member>
             <member optional="true" len="indexCapacityInput"><type>uint32_t</type>*         <name>indices</name></member>
-        </type>
+        </type -->
 
         <type category="struct" name="XrGraphicsRequirementsOpenGLKHR">
             <member values="XR_TYPE_GRAPHICS_REQUIREMENTS_OPENGL_KHR"><type>XrStructureType</type> <name>type</name></member>
@@ -1449,12 +1453,13 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
                  The application should take drastic mitigation action"/>
     </enums>
 
+    <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
     <!--enums for XR_KHR_visibility_mask -->
-    <enums name="XrVisibilityMaskTypeKHR" type="enum" comment="">
+    <!-- enums name="XrVisibilityMaskTypeKHR" type="enum" comment="">
         <enum value="1"    name="XR_VISIBILITY_MASK_TYPE_HIDDEN_TRIANGLE_MESH_KHR"  comment="exclusive mesh; indicates that which the viewer cannot see."/>
         <enum value="2"    name="XR_VISIBILITY_MASK_TYPE_VISIBLE_TRIANGLE_MESH_KHR" comment="inclusive mesh; indicates strictly that which the viewer can see."/>
         <enum value="3"    name="XR_VISIBILITY_MASK_TYPE_LINE_LOOP_KHR"             comment="line loop; traces the outline of the area the viewer can see."/>
-    </enums>
+    </enums -->
 
     <!-- XR_EXT_hand_tracking -->
     <enums name="XrHandEXT" type="enum">
@@ -2052,15 +2057,16 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
             <param><type>XrTime</type>* <name>time</name></param>
         </command>
 
+        <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
         <!-- commands for XR_KHR_visibility_mask -->
-        <command successcodes="XR_SUCCESS,XR_SESSION_LOSS_PENDING" errorcodes="XR_ERROR_HANDLE_INVALID,XR_ERROR_INSTANCE_LOST,XR_ERROR_RUNTIME_FAILURE,XR_ERROR_VALIDATION_FAILURE,XR_ERROR_VIEW_CONFIGURATION_TYPE_UNSUPPORTED,XR_ERROR_SIZE_INSUFFICIENT,XR_ERROR_SESSION_LOST,XR_ERROR_FUNCTION_UNSUPPORTED">
+        <!-- command successcodes="XR_SUCCESS,XR_SESSION_LOSS_PENDING" errorcodes="XR_ERROR_HANDLE_INVALID,XR_ERROR_INSTANCE_LOST,XR_ERROR_RUNTIME_FAILURE,XR_ERROR_VALIDATION_FAILURE,XR_ERROR_VIEW_CONFIGURATION_TYPE_UNSUPPORTED,XR_ERROR_SIZE_INSUFFICIENT,XR_ERROR_SESSION_LOST,XR_ERROR_FUNCTION_UNSUPPORTED">
             <proto><type>XrResult</type> <name>xrGetVisibilityMaskKHR</name></proto>
             <param><type>XrSession</type> <name>session</name></param>
             <param><type>XrViewConfigurationType</type> <name>viewConfigurationType</name></param>
             <param><type>uint32_t</type> <name>viewIndex</name></param>
             <param><type>XrVisibilityMaskTypeKHR</type> <name>visibilityMaskType</name></param>
             <param><type>XrVisibilityMaskKHR</type>* <name>visibilityMask</name></param>
-        </command>
+        </command -->
 
         <!-- commands for XR_MSFT_spatial_anchor -->
         <command successcodes="XR_SUCCESS" errorcodes="XR_ERROR_INSTANCE_LOST,XR_ERROR_OUT_OF_MEMORY,XR_ERROR_FUNCTION_UNSUPPORTED,XR_ERROR_VALIDATION_FAILURE,XR_ERROR_HANDLE_INVALID,XR_ERROR_POSE_INVALID,XR_ERROR_CREATE_SPATIAL_ANCHOR_FAILED_MSFT,XR_ERROR_TIME_INVALID,XR_ERROR_SESSION_LOST,XR_SESSION_LOSS_PENDING">
@@ -2378,15 +2384,16 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
         </require>
     </extension>
 
+    <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
     <!-- Runtime support for additional per-layer depth info -->
-    <extension name="XR_KHR_composition_layer_depth" number="11" type="instance" supported="openxr">
+    <!-- extension name="XR_KHR_composition_layer_depth" number="11" type="instance" supported="openxr">
         <require>
             <enum value="5" name="XR_KHR_composition_layer_depth_SPEC_VERSION"/>
             <enum value="&quot;XR_KHR_composition_layer_depth&quot;" name="XR_KHR_COMPOSITION_LAYER_DEPTH_EXTENSION_NAME"/>
             <type name="XrCompositionLayerDepthInfoKHR"/>
             <enum offset="0" extends="XrStructureType" name="XR_TYPE_COMPOSITION_LAYER_DEPTH_INFO_KHR"/>
         </require>
-    </extension>
+    </extension -->
 
     <!-- Reserved for headless "graphics binding" extension -->
     <extension name="XR_KHR_headless" number="14" type="instance" supported="disabled">
@@ -2606,8 +2613,9 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
       </require>
     </extension>
 
+    <!-- Forcefully turn off this extension so it doesn't interfere with using Unreal Engine as an Overlay layer -->
     <!-- Visibility mask extension -->
-    <extension name="XR_KHR_visibility_mask" number="32" type="instance" supported="openxr">
+    <!-- extension name="XR_KHR_visibility_mask" number="32" type="instance" supported="openxr">
         <require>
             <enum value="2" name="XR_KHR_visibility_mask_SPEC_VERSION"/>
             <enum value="&quot;XR_KHR_visibility_mask&quot;" name="XR_KHR_VISIBILITY_MASK_EXTENSION_NAME"/>
@@ -2618,7 +2626,7 @@ maintained in the master branch of the Khronos OpenXR GitHub project.
             <type name="XrEventDataVisibilityMaskChangedKHR"/>
             <command name="xrGetVisibilityMaskKHR"/>
         </require>
-    </extension>
+    </extension -->
 
     <!-- Reserved space for EXT permissions support -->
     <extension name="XR_EXT_permissions_support" number="33" type="instance" supported="disabled">

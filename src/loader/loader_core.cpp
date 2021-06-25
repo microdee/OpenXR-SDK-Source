@@ -171,11 +171,13 @@ xrEnumerateInstanceExtensionProperties(const char *layerName, uint32_t propertyC
     }
 
     // remove extensions interfering with using Unreal Engine as Overlay Layer via XR_EXTX_OVERLAY
+    #if 0 // disable in case removing these extensions from xr.xml works better
     extension_properties.erase(std::remove_if(extension_properties.begin(), extension_properties.end(), [&](XrExtensionProperties props)
     {
         return std::string(props.extensionName).compare(XR_KHR_COMPOSITION_LAYER_DEPTH_EXTENSION_NAME) == 0
             || std::string(props.extensionName).compare(XR_KHR_VISIBILITY_MASK_EXTENSION_NAME) == 0;
     }), extension_properties.end());
+    #endif
 
     auto num_extension_properties = static_cast<uint32_t>(extension_properties.size());
     if (propertyCapacityInput == 0) {
